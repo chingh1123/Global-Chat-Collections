@@ -1,3 +1,4 @@
+const client = require('../index.js')
 client.on('messageCreate', m => {
   if (m.author.bot) return;
   let url = ""
