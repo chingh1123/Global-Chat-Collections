@@ -1,0 +1,16 @@
+{
+  "name": "Global Chat Compilation",
+  "version": "1.0.0",
+  "description": "Make you can chat with other server members!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.8.0",
+  }
+}
