@@ -23,6 +23,7 @@ client.on("messageCreate", async message => {
         if (message.content) {
             embed.setDescription(`**Message:**\n>>> ${String(message.content).substring(0, 2000)}`)
         }
+        // message attachment
         let url = "";
         let imagename = "UNKNOWN";
         if (message.attachments.size > 0) {
@@ -43,7 +44,7 @@ client.on("messageCreate", async message => {
                 url.indexOf("jpg", url.length - 3) !== -1 || url.indexOf("JPG", url.length - 3) !== -1;
         }
         messageData.embeds = [embed];
-        sendallGlobal(message, messageData);
+        sendallGlobal(message, messageData); // send embed messages to all the channel taht defined
     }
 })
 async function sendallGlobal(message, messageData) {
@@ -52,7 +53,7 @@ async function sendallGlobal(message, messageData) {
     message.channel.send(messageData).then(msg => {
     }).catch((O) => { })
 
-    for (const chid of globalChannels) {
+    for (const chid of globalChannels) { // loop sending the messages
         let channel = client.channels.cache.get(chid);
         if (!channel) {
             notincachechannels.push(chid);
@@ -63,7 +64,7 @@ async function sendallGlobal(message, messageData) {
             }).catch((O) => { })
         }
     }
-    for (const chid of notincachechannels) {
+    for (const chid of notincachechannels) { // loop sending the messages
         let channel = await client.channels.fetch(chid).catch(() => {
             console.log(`${chid} is not available!`)
         });
