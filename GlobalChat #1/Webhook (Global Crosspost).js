@@ -29,12 +29,12 @@ client.on('messageCreate', async(message) => {
         // webhook client 2 send the message at channel id2
         if (url == "") {
             webhookClient2.send({ content: `${message.content}`, username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`
+                avatarURL: `${message.author.displayAvatarURL()}`
             });
         } 
         else {
             webhookClient2.send({ content: `${message.content}`, username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`,
+                avatarURL: `${message.author.displayAvatarURL()}`,
                 files: [url]
             });
         }
@@ -43,13 +43,13 @@ client.on('messageCreate', async(message) => {
         if (url == "") {
             webhookClient1.send({ content: `${message.content}`,
                 username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`,
+                avatarURL: `${message.author.displayAvatarURL()}`,
             });
         }
         else {
             webhookClient1.send({ content: `${message.content}`,
                 username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`,
+                avatarURL: `${message.author.displayAvatarURL()}`,
                 files: [url]
             });
            
@@ -65,13 +65,13 @@ client.on('messageCreate', async(message) => {
         if (url == "") {
             webhookClient1.send({ content: `${message.content}`,
                 username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`,
+                avatarURL: `${message.author.displayAvatarURL()}`,
             });
         }
         else {
             webhookClient1.send({ content: `${message.content}`,
                 username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`,
+                avatarURL: `${message.author.displayAvatarURL()}`,
                 files: [url]
             });
             
@@ -81,14 +81,14 @@ client.on('messageCreate', async(message) => {
         if (url == "") {
             webhookClient2.send({ content: `${message.content}`,
                 username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`,
+                avatarURL: `${message.author.displayAvatarURL()}`,
             });
            
         }
         else {
             webhookClient2.send({ content: `${message.content}`,
                 username: `${message.author.tag} (${message.author.id})`,
-                avatarURL: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}`,
+                avatarURL: `${message.author.displayAvatarURL()}`,
                 files: [url]
             });
             
