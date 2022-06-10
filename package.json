@@ -7,9 +7,9 @@
     "start": "node index.js",
     "test": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["Global Chat", "crosspost"],
+  "author": "ChinGH#2459",
+  "license": "Apache License 2.0",
   "dependencies": {
     "discord.js": "^13.8.0",
   }
