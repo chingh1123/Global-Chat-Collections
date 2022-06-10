@@ -16,6 +16,7 @@ const client = new Client({
     Intents.FLAGS.GUILD_MESSAGES,
     Intents.FLAGS.GUILD_MEMBERS,
     Intents.FLAGS.GUILDS,
+    Intents.FLAGS.MESSAGE_CONTENT,
     Intents.FLAGS.GUILD_INTEGRATIONS,
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS
   ],
